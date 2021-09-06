@@ -3,39 +3,208 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 body
 {
+    overflow: hidden; 
+}
+section
+{
+    /* teste */
+    width: 100%;
+    height: 100%;
+    /* teste */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #161623;
+    /* background: url(bg1.png); */
+    background-size: cover;
+    /* background: rgb(58,65,93);
+    background: linear-gradient(90deg, rgba(115, 128, 187, 1) 0%, rgba(115, 128, 187, 1) 100%); */
+    background-position: center;
+    background-attachment: fixed;
+    padding: 50px;
+    /* teste */
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    background: linear-gradient(-45deg, #ebb3a2, #e7b9b9, #83c9e2, #3A415D);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	/* height: 100vh; */
 }
-body::before
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#f00, #f0f);
-    clip-path: 	circle(30% at right 70%);
+/* teste */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
-body::after
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#2196f3, #e91e63);
-    clip-path: 	circle(20% at 10% 10%);
-}
+
+/* teste */
 .container
+{
+    position: relative;
+    width: calc(100% - 100px);
+    min-height: calc(100vh - 280px);
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+header
+{
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    left: 20px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+header .logo
+{
+    color: #3A415D;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+}
+header ul
+{
+    display: flex;
+}
+header ul li
+{
+    list-style: none;
+    margin: 0 10px;
+}
+header ul li a
+{
+    text-decoration: none;
+    font-weight: 500;
+    color: #3A415D;
+    padding: 8px 15px;
+    border-radius: 25px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.content
+{
+    transform: translateX(-100px);
+    max-width: 700px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    padding-left: 110px;
+}
+.content h2
+{
+    font-size: 3em;
+    color: #3A415D;
+}
+.content p
+{
+    font-size: 1.2em;
+    color: #3A415D;
+}
+.content a
+{
+    padding: 15px 30px;
+    border-radius: 35px;
+    display: inline-block;
+    padding-left: 15px 30px;
+    background: #fff;
+    color: #3A415D;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.imgBx img
+{
+    max-width: 400px;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate
+{
+    0%,100
+    {
+        transform: translateY(50px);
+    }
+    50%
+    {
+        transform: translateY(100px)
+    }   
+}
+.sci
+{
+    position: absolute;
+    right: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sci li
+{
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 5px 0;
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+}
+.sci li a img
+{
+    width: 110px;
+    height: 110px;
+    transform: scale(0.6);
+    transition: 0.5s;
+}
+.sci li:hover a img
+{
+    transform: scale(0.6) rotate(360deg);
+}
+.copyrightText
+{
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    color: #3A415D;
+}
+
+/* teste */
+.containercard
 {
     position: relative;
     display: flex;
@@ -43,9 +212,9 @@ body::after
     align-items: center;
     max-width: 1220px;
     flex-wrap: wrap;
-    z-index: 1;
+    /* z-index: 1; */
 }
-.container .card
+.containercard .card
 {
     position: relative;
     width: 280px;
@@ -62,41 +231,42 @@ body::after
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
 }
-.container .card .content
+.containercard .card .contentcard
 {
     padding: 40px;
     text-align: center;
-    transform: translateY(100px);
+    /* transform: translateY(100px);
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.5s; */
 }
-.container .card:hover .content
+.containercard .card:hover .contentcard
 {
-    transform: translateY(0px);
-    opacity: 1;
+    /* transform: translateY(0px);*/
+    opacity: 1; 
 }
-.container .card .content h2
+.containercard .card .contentcard h2
 {
     position: absolute;
-    top: -80px;
+    top: -60px;
     right: 20px;
     font-size: 8em;
     color: rgba(255, 255, 255, 0.5);
     pointer-events: none;
 }
-.container .card .content h3
+.containercard .card .contentcard h3
 {
+    margin-top: 30px;
     font-size: 1.8em;
     color: #fff;
-    z-index: 1;
+    /* z-index: 1; */
 }
-.container .card .content p
+.containercard .card .contentcard p
 {
     font-size: 1em;
     color: #fff;
     font-weight: 300;
 }
-.container .card .content a
+.containercard .card .contentcard a
 {
     position: relative;
     display: inline-block;
@@ -108,4 +278,10 @@ body::after
     text-decoration: none;
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+}
+/* teste */
+@media screen and (max-width: 910px){
+    .imgBx img{
+        visibility: hidden;
+    }
 }
