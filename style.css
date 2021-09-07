@@ -7,8 +7,14 @@
     font-family: 'Poppins', sans-serif;
 }
 body
-{
+{ 
     overflow: hidden; 
+    background: linear-gradient(-45deg, #112d60, #dd83e0, #abf8e7, #8778c7);
+}
+body.active
+{ 
+    overflow: hidden; 
+    background: #1a1a1a;
 }
 section
 {
@@ -30,9 +36,9 @@ section
     /* teste */
     /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
     /* background: linear-gradient(-45deg, #ebb3a2, #e7b9b9, #83c9e2, #3A415D); */
-    background: linear-gradient(-45deg, #112d60, #dd83e0, #abf8e7, #8778c7);
+    /* background: linear-gradient(-45deg, #112d60, #dd83e0, #abf8e7, #8778c7); */
     /* background: linear-gradient(-45deg, #3A415D, #F6D4D4); */
-	background-size: 400% 400%;
+	background-size: 100% 100%;
 	/* animation: gradient 15s ease infinite; */
 	/* height: 100vh; */
 }
@@ -52,6 +58,8 @@ section
 /* teste */
 .container
 {
+    display: flex;
+    align-items:center;
     position: relative;
     width: calc(100% - 100px);
     min-height: calc(100vh - 280px);
@@ -99,6 +107,10 @@ header ul li
     list-style: none;
     margin: 0 10px;
 }
+input
+{
+    visibility: hidden;
+}
 header ul li a
 {
     text-decoration: none;
@@ -106,6 +118,31 @@ header ul li a
     color: #3A415D;
     padding: 8px 15px;
     border-radius: 25px;
+}
+img#moon{
+    position: fixed;
+    top: 47px;
+    left: 17px;
+    width: 50px;
+    height: 50px;
+}
+a#toggle
+{
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    cursor: pointer;
+    border: 2px solid rgb(61, 61, 61);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    font-weight: 500;
+    color: #3A415D;
+    padding: 8px 15px;
+    border-radius: 25px;
+    z-index: 1;
+}
+a#toggle.active{
+    background: #fff;
 }
 header ul li a:hover,
 header ul li a.active
@@ -209,6 +246,8 @@ header ul li a.active
 /* teste */
 .containercard
 {
+    display: flex;
+    align-items:center;
     position: relative;
     display: flex;
     justify-content: center;
@@ -219,6 +258,8 @@ header ul li a.active
 }
 .containercard .card
 {
+    display: flex;
+    align-items:center;
     position: relative;
     width: 280px;
     height: 350px;
@@ -286,6 +327,7 @@ header ul li a.active
 /* content card 2 */
 .containercard .card2
 {
+    
     position: relative;
     width: 280px;
     height: 350px;
