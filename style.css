@@ -395,7 +395,7 @@ img#flor2{
     .imgBx img{
         visibility: hidden;
     }
-    /* #imgcontato{
+    #imgcontato{
         visibility: hidden;
     }
     #ulcard{
@@ -418,7 +418,7 @@ img#flor2{
     }
     #circulo6{
         visibility: hidden;
-    } */
+    }
 }
 /* bola css */
 #circulo1
@@ -504,7 +504,7 @@ img#flor2{
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
 }
 /* bola */
-@media screen and (max-width: 1090px){
+@media screen and (max-width: 410px){
     body
     {
         /* overflow: auto;  */
@@ -514,7 +514,7 @@ img#flor2{
     .imgBx img{
         visibility: hidden;
     }
-    /* #imgcontato{
+    #imgcontato{
         visibility: hidden;
     }
     #ulcard{
@@ -537,15 +537,6 @@ img#flor2{
     }
     #circulo6{
         visibility: hidden;
-    } */
+    }
 }
 /* -------------------------- */
-@media only screen and (max-width: 400px) {
-    .mobile-hide{ display: none !important; }
-    }
-    @media only screen and (max-width: 400px) {
-    .mobile{ display: inline !important; }
-    }
-    @media only screen and (min-width: 500px) {
-    .desktop-hide{ display: none !important; }
-    }
