@@ -31,8 +31,9 @@ section
     /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
     /* background: linear-gradient(-45deg, #ebb3a2, #e7b9b9, #83c9e2, #3A415D); */
     background: linear-gradient(-45deg, #112d60, #dd83e0, #abf8e7, #8778c7);
+    /* background: linear-gradient(-45deg, #3A415D, #F6D4D4); */
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	/* animation: gradient 15s ease infinite; */
 	/* height: 100vh; */
 }
 /* teste */
@@ -387,9 +388,35 @@ img#flor2{
 @media screen and (max-width: 910px){
     body
     {
-        overflow: auto; 
+        /* overflow: auto;  */
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
     .imgBx img{
+        visibility: hidden;
+    }
+    #imgcontato{
+        visibility: hidden;
+    }
+    #ulcard{
+        visibility: hidden;
+    }
+    #circulo1{
+        visibility: hidden;
+    }
+    #circulo2{
+        visibility: hidden;
+    }
+    #circulo3{
+        visibility: hidden;
+    }
+    #circulo4{
+        visibility: hidden;
+    }
+    #circulo5{
+        visibility: hidden;
+    }
+    #circulo6{
         visibility: hidden;
     }
 }
@@ -421,7 +448,7 @@ img#flor2{
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
 }
 #circulo3
-{   
+{
     top: 300px;
     left: 600px;
     position: absolute;
@@ -430,6 +457,48 @@ img#flor2{
     border-radius: 50%;
     height: 200px;
     width: 200px;
+    margin: 0;
+    background: radial-gradient(circle at 70px 90px, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.3));
+    box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
+}
+#circulo4
+{
+    top: 1450px;
+    left: 300px;
+    position: absolute;
+    display: block;
+    background:#3A415D;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 0;
+    background: radial-gradient(circle at 70px 90px, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.3));
+    box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
+}
+#circulo5
+{   
+    top: 1400px;
+    left: 700px;
+    position: absolute;
+    display: block;
+    background: #3A415D;
+    border-radius: 50%;
+    height: 700px;
+    width: 700px;
+    margin: 0;
+    background: radial-gradient(circle at 70px 90px, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.3));
+    box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
+}
+#circulo6
+{
+    top: 2400px;
+    left: 100px;
+    position: absolute;
+    display: block;
+    background: #3A415D;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
     margin: 0;
     background: radial-gradient(circle at 70px 90px, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.3));
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
