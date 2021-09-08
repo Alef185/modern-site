@@ -10,10 +10,12 @@
 body
 { 
     /* overflow: hidden;  */
-    background: linear-gradient(-45deg, #112d60, #dd83e0, #abf8e7, #8778c7);
+    overflow-x: hidden;
+    background: linear-gradient(#dd83e0, #dd83e0);
 }
 body.active
 { 
+    overflow-x: hidden;
     /* overflow: hidden; */
     background: #070421; 
 }
@@ -60,6 +62,14 @@ section
     padding: 50px;
 }
 .container-carousel{
+    padding-top: 10px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container-contato{
     padding-top: 10px;
     width: 100vw;
     display: flex;
@@ -420,6 +430,7 @@ header ul li a:hover
 .containercard .card2 .contentcard a:hover
 {
     background: #fff;
+    color: 000;
 }
 div#containercar{
     justify-content: center;
@@ -701,8 +712,19 @@ img#car3{
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
+    color: #000;
 }
 ::-webkit-scrollbar-thumb {
-    background: #f00;
+    background: linear-gradient(transparent, #2ACAEA);
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(255,132,163, 0.05);
+} 
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #FF84A3);
     border-radius: 6px;
 } 
+button#btnenviar:hover
+{
+    background: #fff;
+    color: #000;
+}
