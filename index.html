@@ -12,23 +12,22 @@
     <a id="toggle">⠀⠀⠀DarkMode</a><input name="theme" type="checkbox"/>
     <img src="moon.png" id="moon">
     <!-- teste circulo -->
-    <!-- <div id="circulo1"></div>
+    <div id="circulo1"></div>
     <div id="circulo2"></div>
     <div id="circulo3"></div>
     <div id="circulo4"></div>
     <div id="circulo5"></div>
-    <div id="circulo6"></div> -->
-    
+    <div id="circulo6"></div>
     <!-- teste circulo fim -->
     <section>
         <div class="container" id="home">
             <header>
-                <a href="#" class="logo">L.Chan</a>
+                <a href="#" class="logo" id="logodark">L.Chan</a>
                 <ul id="ulcard">
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#loja">Encomendas</a></li>
-                    <li><a href="#contato">Contato</a></li>                      
+                    <li><a href="#sobre" id="adark">Sobre</a></li>
+                    <li><a href="#loja" id="adark2">Encomendas</a></li>
+                    <li><a href="#contato" id="adark3">Contato</a></li>                      
                 </ul>
             </header>
             <div class="content">
@@ -51,7 +50,7 @@
     <section id="sobre">
         <div class="container" >
             <header>
-                <a href="#" class="logo">L.Chan</a>
+                <a href="#" class="logo" id="logodark">L.Chan</a>
                 <ul id="ulcard">
                     <li><a href="#">Home</a></li>
                     <li><a href="#sobre" class="active">Sobre</a></li>
@@ -172,10 +171,24 @@
     </section>
     <script>
     	const body = document.querySelector('body');
+        const h2 = document.querySelector('h2');
+        const p = document.querySelector('p');
+        const a = document.querySelector('a');
     	const toggle = document.getElementById('toggle');
+        const logodark = document.getElementById('logodark');
+        const adark = document.getElementById('adark');
+        const adark2 = document.getElementById('adark2');
+        const adark3 = document.getElementById('adark3');
     	toggle.onclick = function () {
     		toggle.classList.toggle('active');
+            logodark.classList.toggle('active');
+            adark.classList.toggle('active');
+            adark2.classList.toggle('active');
+            adark3.classList.toggle('active');
     		body.classList.toggle('active');
+            h2.classList.toggle('active');
+            p.classList.toggle('active');
+            a.classList.toggle('awhite');
     	}
     </script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>

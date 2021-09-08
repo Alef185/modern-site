@@ -13,8 +13,13 @@ body
 }
 body.active
 { 
-    overflow: hidden; 
-    background: #1a1a1a;
+    overflow: hidden;
+    background: #070421; 
+    /* background: url(bg3.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
+    /* background: linear-gradient(90deg,black, white); */
 }
 section
 {
@@ -64,7 +69,7 @@ section
     width: calc(100% - 100px);
     min-height: calc(100vh - 280px);
     min-height: 300px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     display: flex;
@@ -132,8 +137,11 @@ a#toggle
     top: 50px;
     left: 20px;
     cursor: pointer;
-    border: 2px solid rgb(61, 61, 61);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
     text-decoration: none;
     font-weight: 500;
     color: #3A415D;
@@ -142,16 +150,31 @@ a#toggle
     z-index: 1;
 }
 a#toggle.active{
-    background: #fff;
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 25px;
+    z-index: 1;
 }
-header ul li a:hover,
-header ul li a.active
+header ul li a:hover
 {
     background: #fff;
+    color: #3A415D;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 .content
 {
+    background: rgba(255, 255, 255, 0.2);
     transform: translateX(-100px);
     max-width: 700px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -179,13 +202,24 @@ header ul li a.active
     border-radius: 35px;
     display: inline-block;
     padding-left: 15px 30px;
-    background: #fff;
-    color: #3A415D;
+    background: linear-gradient(90deg,#e144c7,#f266a5);
+    /* background: rgba(255, 255, 255, 0.4); */
+    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); */
+    /* border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); */
+    color: #fff;
     margin-top: 20px;
     font-size: 1.2em;
     font-weight: 500;
     text-decoration: none;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0px 0px 15px rgba(255, 0, 106, 0.61);
+}
+.content a:hover
+{
+    background: #fff;
+    color: #3A415D;
 }
 .imgBx img
 {
@@ -313,16 +347,22 @@ header ul li a.active
 }
 .containercard .card .contentcard a
 {
+    /* teste */
+    box-shadow: 0px 0px 15px rgba(255, 0, 106, 0.61);
+    /* border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); */
+    /* teste */
     position: relative;
     display: inline-block;
     padding: 8px 20px;
     margin-top: 15px;
-    background: #fff;
-    color: #000;
+    background: linear-gradient(90deg,#e144c7,#f266a5);
+    color: #fff;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 500;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) */
 }
 /* content card 2 */
 .containercard .card2
@@ -380,16 +420,17 @@ header ul li a.active
 }
 .containercard .card2 .contentcard a
 {
+    box-shadow: 0px 0px 15px rgba(255, 0, 106, 0.61);
     position: relative;
     display: inline-block;
     padding: 8px 20px;
     margin-top: 15px;
-    background: #fff;
-    color: #000;
+    background: linear-gradient(90deg,#e144c7,#f266a5);
+    color: #fff;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 500;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) */
 }
 div#containercar{
     justify-content: center;
@@ -472,7 +513,7 @@ img#flor2{
     height: 300px;
     width: 300px;
     margin: 0;
-    background: radial-gradient(circle at 70px 90px, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.3));
+    background: radial-gradient(circle at 70px 90px, #866da6, #2e2276);
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
 }
 #circulo2
@@ -486,7 +527,7 @@ img#flor2{
     height: 400px;
     width: 400px;
     margin: 0;
-    background: radial-gradient(circle at 70px 90px, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.3));
+    background: radial-gradient(circle at 70px 90px, #de89c0, #9c33b3);
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
 }
 #circulo3
@@ -500,7 +541,7 @@ img#flor2{
     height: 200px;
     width: 200px;
     margin: 0;
-    background: radial-gradient(circle at 70px 90px, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.3));
+    background: radial-gradient(circle at 70px 90px, #ee6cc0, #a3296c);
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
 }
 #circulo4
@@ -514,7 +555,7 @@ img#flor2{
     height: 200px;
     width: 200px;
     margin: 0;
-    background: radial-gradient(circle at 70px 90px, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.3));
+    background: radial-gradient(circle at 70px 90px, #de89c0, #9c33b3);
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
 }
 #circulo5
@@ -528,7 +569,7 @@ img#flor2{
     height: 700px;
     width: 700px;
     margin: 0;
-    background: radial-gradient(circle at 70px 90px, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.3));
+    background: radial-gradient(circle at 70px 90px, #866da6, #2e2276);
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
 }
 #circulo6
@@ -542,7 +583,7 @@ img#flor2{
     height: 500px;
     width: 500px;
     margin: 0;
-    background: radial-gradient(circle at 70px 90px, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.3));
+    background: radial-gradient(circle at 70px 90px, #de89c0, #9c33b3);
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
 }
 /* bola */
@@ -582,3 +623,74 @@ img#flor2{
     }
 }
 /* -------------------------- */
+/* active */
+.content h2.active
+{
+    font-size: 3em;
+    color: #ffffff;
+}
+.content p.active
+{
+    font-size: 1.2em;
+    color: #ffffff;
+}
+.content a.active
+{
+    color: #ffffff;
+}
+#logodark.active
+{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+}
+#adark.active
+{
+    color: #fff;
+}
+#adark.active:hover
+{
+    background: #fff;
+    color: #3A415D;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+#adark2.active
+{
+    color: #fff;
+}
+#adark2.active:hover
+{
+    background: #fff;
+    color: #3A415D;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+#adark3.active
+{
+    color: #fff;
+}
+#adark3.active:hover
+{
+    background: #fff;
+    color: #3A415D;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+header ul li a.active
+{
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-weight: 500;
+    color: #3A415D;
+    padding: 8px 15px;
+    border-radius: 25px;
+}
+header ul li a:hover
+{
+    background: #fff;
+    color: #3A415D;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
