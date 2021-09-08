@@ -607,6 +607,11 @@ img#flor2{
     img#moon{
         visibility: hidden;
     }
+    ::-webkit-scrollbar {
+        display: none;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
 }
 .content h2.active
 {
@@ -710,19 +715,6 @@ img#car3{
     border-radius: 50px;
 }
 /* scrollbar */
-::-webkit-scrollbar {
-    width: 12px;
-    color: #000;
-}
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent, #2ACAEA);
-    border-radius: 6px;
-    box-shadow: 0 5px 10px rgba(255,132,163, 0.05);
-} 
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(transparent, #FF84A3);
-    border-radius: 6px;
-} 
 button#btnenviar:hover
 {
     background: #fff;
