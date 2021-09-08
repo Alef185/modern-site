@@ -452,11 +452,17 @@ img#flor2{
 @media screen and (max-width: 910px){
     ::-webkit-scrollbar {
         display: none;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }    
     body
     {
         overflow-x: hidden;
         overflow-y: scroll;
+        background-color: #070421;
+    }
+    .sci{
+        visibility: hidden;
     }
     .imgBx img{
         visibility: hidden;
@@ -485,6 +491,7 @@ img#flor2{
     #circulo6{
         visibility: hidden;
     }
+
 }
 #circulo1
 {
