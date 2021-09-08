@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    -webkit-box-sizing: border-box;
 }
 body
 { 
@@ -15,39 +16,21 @@ body.active
 { 
     overflow: hidden;
     background: #070421; 
-    /* background: url(bg3.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; */
-    /* background: linear-gradient(90deg,black, white); */
 }
 section
 {
-    /* teste */
     width: 100%;
     height: 100%;
-    /* teste */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background: url(bg1.png); */
     background-size: cover;
-    /* background: rgb(58,65,93);
-    background: linear-gradient(90deg, rgba(115, 128, 187, 1) 0%, rgba(115, 128, 187, 1) 100%); */
     background-position: center;
     background-attachment: fixed;
     padding: 50px;
-    /* teste */
-    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-    /* background: linear-gradient(-45deg, #ebb3a2, #e7b9b9, #83c9e2, #3A415D); */
-    /* background: linear-gradient(-45deg, #112d60, #dd83e0, #abf8e7, #8778c7); */
-    /* background: linear-gradient(-45deg, #3A415D, #F6D4D4); */
 	background-size: 100% 100%;
-	/* animation: gradient 15s ease infinite; */
-	/* height: 100vh; */
 }
-/* teste */
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -59,8 +42,6 @@ section
 		background-position: 0% 50%;
 	}
 }
-
-/* teste */
 .container
 {
     display: flex;
@@ -77,6 +58,14 @@ section
     align-items: center;
     backdrop-filter: blur(10px);
     padding: 50px;
+}
+.container-carousel{
+    padding-top: 10px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 header
 {
@@ -98,7 +87,7 @@ header
 }
 header .logo
 {
-    color: #3A415D;
+    color: #fff;
     font-weight: 700;
     text-decoration: none;
     font-size: 2em;
@@ -120,7 +109,8 @@ header ul li a
 {
     text-decoration: none;
     font-weight: 500;
-    color: #3A415D;
+    color: #fff;
+    text-shadow: rgba(126, 126, 126, 0.664) 1px 1px 5px;
     padding: 8px 15px;
     border-radius: 25px;
 }
@@ -203,17 +193,11 @@ header ul li a:hover
     display: inline-block;
     padding-left: 15px 30px;
     background: linear-gradient(90deg,#e144c7,#f266a5);
-    /* background: rgba(255, 255, 255, 0.4); */
-    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); */
-    /* border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); */
     color: #fff;
     margin-top: 20px;
     font-size: 1.2em;
     font-weight: 500;
     text-decoration: none;
-    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
     box-shadow: 0px 0px 15px rgba(255, 0, 106, 0.61);
 }
 .content a:hover
@@ -256,7 +240,6 @@ header ul li a:hover
     align-items: center;
     border-radius: 50%;
     margin: 5px 0;
-    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
 }
 .sci li a img
 {
@@ -276,8 +259,6 @@ header ul li a:hover
     left: 50px;
     color: #3A415D;
 }
-
-/* teste */
 .containercard
 {
     display: flex;
@@ -288,7 +269,6 @@ header ul li a:hover
     align-items: center;
     max-width: 1220px;
     flex-wrap: wrap;
-    /* z-index: 1; */
 }
 .containercard .card
 {
@@ -337,7 +317,6 @@ header ul li a:hover
     margin-top: 30px;
     font-size: 1.8em;
     color: #fff;
-    /* z-index: 1; */
 }
 .containercard .card .contentcard p
 {
@@ -347,12 +326,7 @@ header ul li a:hover
 }
 .containercard .card .contentcard a
 {
-    /* teste */
     box-shadow: 0px 0px 15px rgba(255, 0, 106, 0.61);
-    /* border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); */
-    /* teste */
     position: relative;
     display: inline-block;
     padding: 8px 20px;
@@ -362,9 +336,7 @@ header ul li a:hover
     border-radius: 20px;
     text-decoration: none;
     font-weight: 500;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) */
 }
-/* content card 2 */
 .containercard .card2
 {
     
@@ -410,7 +382,6 @@ header ul li a:hover
     margin-top: 30px;
     font-size: 1.8em;
     color: #fff;
-    /* z-index: 1; */
 }
 .containercard .card2 .contentcard p
 {
@@ -430,7 +401,10 @@ header ul li a:hover
     border-radius: 20px;
     text-decoration: none;
     font-weight: 500;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) */
+}
+.containercard .card2 .contentcard a:hover
+{
+    background: #fff;
 }
 div#containercar{
     justify-content: center;
@@ -444,34 +418,14 @@ div#containercar3{
     justify-content: center;
     align-items: center;
 }
-img#imgcar1{
-    justify-content: center;
-    align-items: center;
-    max-width: 500px;
-    max-height: 500px;
 
-}
-img#imgcar2{
-    justify-content: center;
-    align-items: center;
-    max-width: 500px;
-    max-height: 500px;
-}
-img#imgcar3{
-    justify-content: center;
-    align-items: center;
-    max-width: 500px;
-    max-height: 500px;
-}
 img#flor2{
     max-width: 200px;
     max-height: 200px;
 }
-/* teste */
 @media screen and (max-width: 910px){
     body
     {
-        /* overflow: auto;  */
         overflow-x: hidden;
         overflow-y: scroll;
     }
@@ -503,7 +457,6 @@ img#flor2{
         visibility: hidden;
     }
 }
-/* bola css */
 #circulo1
 {
     position: absolute;
@@ -586,11 +539,9 @@ img#flor2{
     background: radial-gradient(circle at 70px 90px, #de89c0, #9c33b3);
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
 }
-/* bola */
 @media screen and (max-width: 410px){
     body
     {
-        /* overflow: auto;  */
         overflow-x: hidden;
         overflow-y: scroll;
     }
@@ -622,8 +573,6 @@ img#flor2{
         visibility: hidden;
     }
 }
-/* -------------------------- */
-/* active */
 .content h2.active
 {
     font-size: 3em;
@@ -693,4 +642,26 @@ header ul li a:hover
     background: #fff;
     color: #3A415D;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+/* teste galeria */
+div#carouselExampleIndicators
+{
+    position: inherit;
+    justify-content: center;
+    align-items: center;
+}
+img#car1{
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 50px;
+}
+img#car2{
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 50px;
+}
+img#car3{
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 50px;
 }
