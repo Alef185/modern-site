@@ -7,6 +7,12 @@
     font-family: 'Poppins', sans-serif;
     -webkit-box-sizing: border-box;
 }
+/* Largura da barra de rolagem */
+::-webkit-scrollbar 
+{
+    width: 0px;
+    display: none;
+}
 body
 { 
     /* overflow: hidden;  */
@@ -449,7 +455,7 @@ img#flor2{
     max-width: 200px;
     max-height: 200px;
 }
-@media screen and (max-width: 910px){
+@media screen and (max-width: 1100px){
     ::-webkit-scrollbar {
         display: none;
         overflow-x: hidden;
@@ -457,8 +463,6 @@ img#flor2{
     }    
     body
     {
-        overflow-x: hidden;
-        overflow-y: scroll;
         background-color: #070421;
     }
     .sci{
@@ -576,10 +580,10 @@ img#flor2{
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
 }
 @media screen and (max-width: 450px){
-    body
-    {
+    ::-webkit-scrollbar {
+        display: none;
         overflow-x: hidden;
-        overflow-y: scroll;
+        overflow-y: hidden;
     }
     .imgBx img{
         visibility: hidden;
