@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head lang="pt-br" class="dark-mode">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
     <meta name='viewport' content='width=device-width, initial-scale=1' namecharset="utf-8"/>
     <title>Luana Chan</title>
     <link rel="stylesheet" href="style.css">
@@ -9,7 +11,7 @@
 </head>
 <body>
 
-    <a id="toggle">⠀⠀⠀DarkMode</a><input name="theme" type="checkbox"/>
+    <a id="toggle">Dark<br>Theme⠀</a><input name="theme" type="checkbox"/>
     <img src="moon.png" id="moon">
     <div id="circulo1"></div>
     <div id="circulo2"></div>
@@ -42,13 +44,13 @@
                 <li><a href="https://www.instagram.com/luachxn/"><img src="Instagram.png"></a></li>
                 <li><a href="#"><img src="Whatsapp.png"></a></li>
             </ul>
-            <p class="copyrightText">Copyright © 2021 Alefi. All Right Reserved.</p>
+            <p class="copyrightText" id="copyText">Copyright © 2021 Alefi. All Right Reserved.</p>
         </div>
     </section>
     <section id="sobre">
         <div class="container" >
             <header>
-                <a href="#" class="logo" id="logodark">L.Chan</a>
+                <a href="#" class="logo" id="logodark">Sobre mim</a>
                 <ul id="ulcard">
                     <li><a href="#">Home</a></li>
                     <li><a href="#sobre" class="active">Sobre</a></li>
@@ -59,12 +61,13 @@
             </header>
             <div class="container">
                 <div class="clearfix">
-                    <p>
+                    <p id="textSobre">
                         Meu nome é Luana Chan, tenho 18 anos, e sempre gostei de desenhar. Faço isso desde pequena, e sempre me encantei com os sorrisos e a alegria que meus desenhos transmitiam às pessoas. Por isso decidi expandir meus horizontes, e agora você também pode ter suas memórias gravadas através da arte.
                     </p>
                   </div>
-            </div> 
-        </div>       
+            </div>
+        </div>  
+            
     </section>
     <section id="loja">
         <div class="containercard" >
@@ -193,11 +196,16 @@
             </header>
             <div class="container">
 
-                <div class="clearfix">                  
-                    <p>
-                      Para entrar em contato, clique aqui :3
-                    </p>
-                  </div>
+                <!-- contato form -->
+                <div class="contato">
+                    <h3>Formulário de contato</h3>
+                    <form action="https://formsubmit.co/alefsouzamac1023@gmail.com" method="POST">
+                        <input type="text" name="name" required>
+                        <input type="email" name="email" required>
+                        <button type="submit">Send</button>
+                   </form> 
+                </div>
+                <!-- contato form -->
                 <ul class="sci">
                     <li><a href="#"><img src="Facebook.png"></a></li>
                     <li><a href="https://www.instagram.com/luachxn/"><img src="Instagram.png"></a></li>
@@ -213,12 +221,20 @@
         const a = document.querySelector('a');
     	const toggle = document.getElementById('toggle');
         const logodark = document.getElementById('logodark');
+        const copyText = document.getElementById('copyText');
+        const textSobre = document.getElementById('textSobre');
+        const textC = document.getElementById('textC');
+        const moon = document.getElementById('moon');
     	toggle.onclick = function () {
     		toggle.classList.toggle('active');
             logodark.classList.toggle('active');
     		body.classList.toggle('active');
             h2.classList.toggle('active');
             p.classList.toggle('active');
+            moon.classList.toggle('active');
+            textSobre.classList.toggle('active');
+            textC.classList.toggle('active');
+            copyText.classList.toggle('active');
             a.classList.toggle('awhite');
     	}
     </script>

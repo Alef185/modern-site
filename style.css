@@ -9,12 +9,12 @@
 }
 body
 { 
-    overflow: hidden; 
+    /* overflow: hidden;  */
     background: linear-gradient(-45deg, #112d60, #dd83e0, #abf8e7, #8778c7);
 }
 body.active
 { 
-    overflow: hidden;
+    /* overflow: hidden; */
     background: #070421; 
 }
 section
@@ -103,7 +103,7 @@ header ul li
 }
 input
 {
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 header ul li a
 {
@@ -115,17 +115,32 @@ header ul li a
     border-radius: 25px;
 }
 img#moon{
+    opacity: 90%;
+    background-image:url(moon.png) ;
     position: fixed;
-    top: 47px;
-    left: 17px;
-    width: 50px;
-    height: 50px;
+    top: 32px;
+    left: 62px;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+img#moon.active{
+    opacity: 100%;
+    background-image:url(moon.png) ;
+    filter: invert(100%);
+    position: fixed;
+    top: 32px;
+    left: 62px;
+    width: 40px;
+    height: 40px;
 }
 a#toggle
 {
+    text-align: left;
+    background-image: url(moon.png);
     position: fixed;
-    top: 50px;
-    left: 20px;
+    top: 30px;
+    left: 10px;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
@@ -134,18 +149,18 @@ a#toggle
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     text-decoration: none;
     font-weight: 500;
-    color: #3A415D;
+    color: #21273f;
     padding: 8px 15px;
     border-radius: 25px;
-    z-index: 1;
+    z-index: 4;
 }
 a#toggle.active{
     position: fixed;
-    top: 50px;
-    left: 20px;
+    top: 30px;
+    left: 10px;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.61);
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -424,6 +439,9 @@ img#flor2{
     max-height: 200px;
 }
 @media screen and (max-width: 910px){
+    ::-webkit-scrollbar {
+        display: none;
+    }    
     body
     {
         overflow-x: hidden;
@@ -539,7 +557,7 @@ img#flor2{
     background: radial-gradient(circle at 70px 90px, #de89c0, #9c33b3);
     box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.8);
 }
-@media screen and (max-width: 410px){
+@media screen and (max-width: 450px){
     body
     {
         overflow-x: hidden;
@@ -570,6 +588,12 @@ img#flor2{
         visibility: hidden;
     }
     #circulo6{
+        visibility: hidden;
+    }
+    a#toggle{
+        visibility: hidden;
+    }
+    img#moon{
         visibility: hidden;
     }
 }
@@ -624,6 +648,18 @@ img#flor2{
     color: #3A415D;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
+#copyText.active
+{
+    color: #fff;
+}
+#textSobre.active
+{
+    color: #fff;
+}
+#textC.active
+{
+    color: #fff;
+}
 header ul li a.active
 {
     background: rgba(255, 255, 255, 0.4);
@@ -644,12 +680,9 @@ header ul li a:hover
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 /* teste galeria */
-div#carouselExampleIndicators
+/* div#carouselExampleIndicators
 {
-    position: inherit;
-    justify-content: center;
-    align-items: center;
-}
+} */
 img#car1{
     max-width: 500px;
     max-height: 500px;
@@ -665,3 +698,11 @@ img#car3{
     max-height: 500px;
     border-radius: 50px;
 }
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: #f00;
+    border-radius: 6px;
+} 
